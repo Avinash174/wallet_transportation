@@ -17,12 +17,20 @@ class _PaymentThirdScreenState extends State<PaymentThirdScreen> {
     return Scaffold(
         backgroundColor: appcolor,
         appBar: AppBar(
-          title: Text(
-            'Payment',
-            style: TextStyle(fontFamily: 'Poppins', fontSize: 22),
-          ),
-          backgroundColor: appcolor,
           elevation: 0,
+          backgroundColor: appcolor,
+          title: Text('Payment'),
+          leading: IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.arrow_back_ios),
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Remix.search_line),
+            ),
+            IconButton(onPressed: () {}, icon: Icon(Remix.menu_fill)),
+          ],
         ),
         body: SingleChildScrollView(
           child: Padding(
@@ -288,7 +296,7 @@ class _PaymentThirdScreenState extends State<PaymentThirdScreen> {
                       onPressed: () {},
                       icon: Icon(
                         Remix.headphone_fill,
-                        color: Colors.white,
+                        color: Color(0xFFFFFFFF)
                       ),
                     ),
                   ],

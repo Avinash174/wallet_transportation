@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:remixicon/remixicon.dart';
 import 'package:wallet_transportation/Screens/payment1/paymentfirst.dart';
+import 'package:wallet_transportation/Screens/payment3/paymentThird.dart';
 import 'package:wallet_transportation/constant/bottom/bottom.dart';
 import 'package:wallet_transportation/constant/color/color.dart';
 import 'package:wallet_transportation/constant/screen/customer.dart';
@@ -50,64 +51,83 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
               ),
             ),
             CustomerSupport(),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Container(
-                    width: 364,
-                    height: 194,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(36),
-                      color: Color(0xFF172339),
-                    ),
-                    padding: EdgeInsets.all(10),
-                    margin: EdgeInsets.all(10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Row(children: [
-                            Icon(
-                              Remix.money_dollar_circle_fill,
-                              color: Colors.white,
-                            ),
-                            SizedBox(
-                              width: 30,
-                            ),
-                            Text(
-                              '4852 **** **** 2203',
-                              style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 22,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w500),
-                            ),
-                          ]),
-                        ),
-                      ],
-                    ),
+            Column(
+              children: [
+                Container(
+                  width: 364,
+                  height: 194,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(36),
+                    color: Color(0xFF172339),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Payment History',
-                          style: TextStyle(
-                              color: Color(0xFF999999),fontWeight: FontWeight.w500,
-                              fontSize: 22,
-                              fontFamily: 'Poppins'
-
+                  padding: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Remix.money_dollar_circle_fill,
+                            color: Colors.white,
                           ),
-
-                        ),
-                      ],
-                    ),
+                          SizedBox(
+                            width: 35,
+                          ),
+                          Text(
+                            '4852 **** **** 2203',
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 22,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Kotak Mahindra Bank',
+                            style: TextStyle(color: Color(0xFF999999)),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          TextButton(onPressed: () {}, child: Text('Edit')),
+                        ],
+                      ),
+                    ],
                   ),
-                  SizedBox(height: 30),
-                  Container(
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Payment History',
+                        style: TextStyle(
+                            color: Color(0xFF999999),
+                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            fontFamily: 'Poppins'),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 30),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => PaymentThirdScreen()));
+                  },
+                  child: Container(
                     width: 364,
                     height: 69,
                     decoration: BoxDecoration(
@@ -154,8 +174,16 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Container(
+                ),
+                SizedBox(height: 10),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => PaymentThirdScreen()));
+                  },
+                  child: Container(
                     width: 364,
                     height: 69,
                     decoration: BoxDecoration(
@@ -202,8 +230,16 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Container(
+                ),
+                SizedBox(height: 10),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => PaymentThirdScreen()));
+                  },
+                  child: Container(
                     width: 364,
                     height: 69,
                     decoration: BoxDecoration(
@@ -250,8 +286,16 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Container(
+                ),
+                SizedBox(height: 10),
+                InkWell(
+                 onTap: (){
+                   Navigator.push(
+                       context,
+                       MaterialPageRoute(
+                           builder: (_) => PaymentThirdScreen()));
+                 },
+                  child: Container(
                     width: 364,
                     height: 69,
                     decoration: BoxDecoration(
@@ -298,10 +342,9 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                       ],
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-
           ],
         ),
       ),
@@ -309,4 +352,3 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
     );
   }
 }
-

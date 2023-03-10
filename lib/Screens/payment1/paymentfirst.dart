@@ -15,7 +15,6 @@ class _PaymentFirstState extends State<PaymentFirst> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: appcolor,
       appBar: AppBar(
         elevation: 0,
@@ -48,7 +47,7 @@ class _PaymentFirstState extends State<PaymentFirst> {
               height: 209,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(36),
-                color: Color(0xff1c2331),
+                color: Color(0xFF172339),
               ),
               padding: EdgeInsets.all(16),
               margin: EdgeInsets.all(20),
@@ -108,39 +107,36 @@ class _PaymentFirstState extends State<PaymentFirst> {
                 ],
               ),
             ),
-            Column(
+            Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(25.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Account Information',
-                        style: TextStyle(
-                          color: Color(0xFF999999),
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Account Information',
+                      style: TextStyle(
+                        color: Color(0xFF999999),
+                        fontFamily: 'Poppins',
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
                       ),
-                      SizedBox(
-                        width: 95,
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Remix.pencil_fill),
-                        color: Colors.white,
-                      ),
-                    ],
-                  ),
+                    ),
+                    SizedBox(
+                      width: 95,
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Remix.pencil_fill),
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
                 Container(
                   height: 364,
                   width: 418,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(36),
-                    color: Color(0xff1c2331),
+                    color: Color(0xFF172339),
                   ),
                   padding: EdgeInsets.all(16),
                   margin: EdgeInsets.all(20),
@@ -161,7 +157,7 @@ class _PaymentFirstState extends State<PaymentFirst> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Row(
                           children: [
@@ -173,7 +169,7 @@ class _PaymentFirstState extends State<PaymentFirst> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -188,7 +184,7 @@ class _PaymentFirstState extends State<PaymentFirst> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Row(
                           children: [
@@ -200,7 +196,7 @@ class _PaymentFirstState extends State<PaymentFirst> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -215,7 +211,7 @@ class _PaymentFirstState extends State<PaymentFirst> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Row(
                           children: [
@@ -227,7 +223,7 @@ class _PaymentFirstState extends State<PaymentFirst> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -242,7 +238,7 @@ class _PaymentFirstState extends State<PaymentFirst> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Row(
                           children: [
@@ -262,16 +258,31 @@ class _PaymentFirstState extends State<PaymentFirst> {
                   height: 245,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(36),
-                    color: Color(0xff1c2331),
+                    color: Color(0xFF172339),
                   ),
                   padding: EdgeInsets.all(16),
                   margin: EdgeInsets.all(20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        Remix.share_fill,
-                        color: Colors.white,
+                      Container(
+                        decoration:
+                        BoxDecoration(shape: BoxShape.circle, boxShadow: [
+                          BoxShadow(
+                            color: Color(0xFF2C3444),
+                            offset: Offset(2,2),
+                            spreadRadius: 5,
+                            blurRadius: 5,
+                          ),
+                        ]),
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Icon(
+                            Remix.share_fill,
+                            size: 40,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                       SizedBox(height: 10),
                       Text(
@@ -301,16 +312,31 @@ class _PaymentFirstState extends State<PaymentFirst> {
                   height: 245,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(36),
-                    color: Color(0xff1c2331),
+                    color: Color(0xFF172339),
                   ),
                   padding: EdgeInsets.all(16),
                   margin: EdgeInsets.all(20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        Remix.download_2_fill,
-                        color: Colors.white,
+                      Container(
+                        decoration:
+                            BoxDecoration(shape: BoxShape.circle, boxShadow: [
+                              BoxShadow(
+                                color: Color(0xFF2C3444),
+                                offset: Offset(0,2),
+                                spreadRadius: 5,
+                                blurRadius: 5,
+                              ),
+                        ]),
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Icon(
+                            Remix.download_2_fill,
+                            size: 40,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                       SizedBox(height: 10),
                       Text(
@@ -390,7 +416,9 @@ class _PaymentFirstState extends State<PaymentFirst> {
                                     Text(
                                       'Multi Trip',
                                       style: TextStyle(
-                                          fontFamily: 'Poppins', fontSize: 12,color: payScreen),
+                                          fontFamily: 'Poppins',
+                                          fontSize: 12,
+                                          color: payScreen),
                                     ),
                                   ],
                                 ),
@@ -436,7 +464,114 @@ class _PaymentFirstState extends State<PaymentFirst> {
                                     Text(
                                       'Multi Trip',
                                       style: TextStyle(
-                                          fontFamily: 'Poppins', fontSize: 12,color: payScreen),
+                                          fontFamily: 'Poppins',
+                                          fontSize: 12,
+                                          color: payScreen),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      Container(
+                        width: 364,
+                        height: 69,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xff1c2331),
+                        ),
+                        padding: EdgeInsets.all(15),
+                        child: Row(
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Remix.money_dollar_circle_fill,
+                                  color: Colors.white,
+                                  shadows: [
+                                    Shadow(
+                                      color: Color(0xFF172339),
+                                      blurRadius: 12,
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  'Transaction History',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14,
+                                      fontFamily: 'Poppins',
+                                      color: Colors.white),
+                                ),
+                                SizedBox(height: 5),
+                                Column(
+                                  children: [
+                                    Text(
+                                      'Multi Trip',
+                                      style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 12,
+                                          color: payScreen),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      Container(
+                        width: 364,
+                        height: 69,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xff1c2331),
+                        ),
+                        padding: EdgeInsets.all(15),
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Icon(Remix.money_dollar_circle_fill,
+                                    color: Colors.white),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Transaction History',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14,
+                                      fontFamily: 'Poppins',
+                                      color: Colors.white),
+                                ),
+                                SizedBox(height: 5),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Multi Trip',
+                                      style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 12,
+                                          color: payScreen),
                                     ),
                                   ],
                                 ),
@@ -482,99 +617,9 @@ class _PaymentFirstState extends State<PaymentFirst> {
                                     Text(
                                       'Multi Trip',
                                       style: TextStyle(
-                                          fontFamily: 'Poppins', fontSize: 12,color: payScreen),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 15),
-                      Container(
-                        width: 364,
-                        height: 69,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xff1c2331),
-                        ),
-                        padding: EdgeInsets.all(15),
-                        child: Row(
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(Remix.money_dollar_circle_fill,
-                                    color: Colors.white),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  'Transaction History',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14,
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white),
-                                ),
-                                SizedBox(height: 5),
-                                Column(
-                                  children: [
-                                    Text(
-                                      'Multi Trip',
-                                      style: TextStyle(
-                                          fontFamily: 'Poppins', fontSize: 12,color: payScreen),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 15),
-                      Container(
-                        width: 364,
-                        height: 69,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xff1c2331),
-                        ),
-                        padding: EdgeInsets.all(15),
-                        child: Row(
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(Remix.money_dollar_circle_fill,
-                                    color: Colors.white),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  'Transaction History',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14,
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white),
-                                ),
-                                SizedBox(height: 5),
-                                Column(
-                                  children: [
-                                    Text(
-                                      'Multi Trip',
-                                      style: TextStyle(
-                                          fontFamily: 'Poppins', fontSize: 12,color: payScreen),
+                                          fontFamily: 'Poppins',
+                                          fontSize: 12,
+                                          color: payScreen),
                                     ),
                                   ],
                                 ),

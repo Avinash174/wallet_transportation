@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:remixicon/remixicon.dart';
 import 'package:wallet_transportation/Screens/payment1/paymentfirst.dart';
 import 'package:wallet_transportation/Screens/payment2/secondScreen.dart';
+import 'package:wallet_transportation/Screens/payment3/paymentThird.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -12,7 +13,6 @@ class BottomBar extends StatefulWidget {
 
 class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
-
 
   @override
   Widget build(BuildContext context) {
@@ -72,39 +72,40 @@ class _BottomBarState extends State<BottomBar> {
         _selectedIndex = index;
       });
     }
+
     return BottomNavigationBar(
-      backgroundColor: Colors.grey[200],
-      selectedItemColor: Colors.blue,
+      backgroundColor: Colors.red,
+      selectedItemColor: Colors.white,
       unselectedItemColor: Colors.grey[600],
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: IconButton(
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => PaymentFirst()));
-            },
-            icon: IconButton(onPressed: () {  }, icon: Icon(Remix.home_2_fill),)
-          ),
+          icon: IconButton(onPressed: () {
+            Navigator.push(context,MaterialPageRoute(builder: (_)=>PaymentThirdScreen()));
+          }, icon: Icon(Remix.home_2_fill),
+
+              ),
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Remix.search_2_fill),
-          label: 'Search',
+          icon: IconButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_)=>PaymentFirst()));
+          }, icon: Icon(Remix.money_dollar_circle_fill)),
+          label: 'Bidding',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Remix.filter_2_fill),
-          label: 'Filter',
+          icon: Icon(Remix.add_circle_fill),
+          label: 'Add',
         ),
         BottomNavigationBarItem(
           icon: IconButton(
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => PaymentSecondScreen()));
-            }, icon: Icon(Remix.user_2_fill),
+            },
+            icon: Icon(Remix.wallet_3_fill),
           ),
           label: 'Profile',
         ),
-
       ],
       currentIndex: _selectedIndex,
       onTap: _onItemTapped,

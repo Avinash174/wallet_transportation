@@ -39,7 +39,7 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: EdgeInsets.only(left: 30,top: 20),
               child: Text(
                 'Transaction History',
                 style: TextStyle(
@@ -62,51 +62,60 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                   ),
                   padding: EdgeInsets.all(10),
                   margin: EdgeInsets.all(10),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Remix.money_dollar_circle_fill,
-                            color: Colors.white,
-                          ),
-                          SizedBox(
-                            width: 35,
-                          ),
-                          Text(
-                            '4852 **** **** 2203',
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 22,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 50,),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 30),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Remix.money_dollar_circle_fill,
                                 color: Colors.white,
-                                fontWeight: FontWeight.w500),
+                              ),
+                              SizedBox(
+                                width: 35,
+                              ),
+                              Text(
+                                '4852 **** **** 2203',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 22,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Kotak Mahindra Bank',
-                            style: TextStyle(color: Color(0xFF999999)),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 25,top: 5),
+                          child: Column(
+
+                            children: [
+                              Text(
+                                'Kotak Mahindra Bank',
+                                style: TextStyle(color: Color(0xFF999999)),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          TextButton(onPressed: () {}, child: Text('Edit')),
-                        ],
-                      ),
-                    ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 25),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              TextButton(onPressed: () {}, child: Text('Edit')),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.only(left: 30,top: 20),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
                         'Payment History',
@@ -127,7 +136,7 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                         MaterialPageRoute(
                             builder: (_) => PaymentThirdScreen()));
                   },
-                  child: Container(
+                  child:Container(
                     width: 364,
                     height: 69,
                     decoration: BoxDecoration(
@@ -140,8 +149,16 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Remix.money_dollar_circle_fill,
-                                color: Colors.white),
+                            Icon(
+                              Remix.money_dollar_circle_fill,
+                              color: Colors.white,
+                              shadows: [
+                                Shadow(
+                                  color: Color(0xFF172339),
+                                  blurRadius: 12,
+                                )
+                              ],
+                            ),
                           ],
                         ),
                         SizedBox(
@@ -160,12 +177,15 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                             SizedBox(height: 5),
                             Column(
                               children: [
-                                Text(
-                                  'Multi Trip',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 12,
-                                      color: payScreen),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 70),
+                                  child: Text(
+                                    'Multi Trip',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 12,
+                                        color: payScreen),
+                                  ),
                                 ),
                               ],
                             ),
@@ -196,8 +216,16 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Remix.money_dollar_circle_fill,
-                                color: Colors.white),
+                            Icon(
+                              Remix.money_dollar_circle_fill,
+                              color: Colors.white,
+                              shadows: [
+                                Shadow(
+                                  color: Color(0xFF172339),
+                                  blurRadius: 12,
+                                )
+                              ],
+                            ),
                           ],
                         ),
                         SizedBox(
@@ -216,12 +244,15 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                             SizedBox(height: 5),
                             Column(
                               children: [
-                                Text(
-                                  'Multi Trip',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 12,
-                                      color: payScreen),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 70),
+                                  child: Text(
+                                    'Multi Trip',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 12,
+                                        color: payScreen),
+                                  ),
                                 ),
                               ],
                             ),
@@ -239,7 +270,8 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                         MaterialPageRoute(
                             builder: (_) => PaymentThirdScreen()));
                   },
-                  child: Container(
+                  child:
+                  Container(
                     width: 364,
                     height: 69,
                     decoration: BoxDecoration(
@@ -252,8 +284,16 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Remix.money_dollar_circle_fill,
-                                color: Colors.white),
+                            Icon(
+                              Remix.money_dollar_circle_fill,
+                              color: Colors.white,
+                              shadows: [
+                                Shadow(
+                                  color: Color(0xFF172339),
+                                  blurRadius: 12,
+                                )
+                              ],
+                            ),
                           ],
                         ),
                         SizedBox(
@@ -272,12 +312,15 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                             SizedBox(height: 5),
                             Column(
                               children: [
-                                Text(
-                                  'Multi Trip',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 12,
-                                      color: payScreen),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 70),
+                                  child: Text(
+                                    'Multi Trip',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 12,
+                                        color: payScreen),
+                                  ),
                                 ),
                               ],
                             ),
@@ -308,8 +351,16 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Remix.money_dollar_circle_fill,
-                                color: Colors.white),
+                            Icon(
+                              Remix.money_dollar_circle_fill,
+                              color: Colors.white,
+                              shadows: [
+                                Shadow(
+                                  color: Color(0xFF172339),
+                                  blurRadius: 12,
+                                )
+                              ],
+                            ),
                           ],
                         ),
                         SizedBox(
@@ -328,13 +379,18 @@ class _PaymentSecondScreenState extends State<PaymentSecondScreen> {
                             SizedBox(height: 5),
                             Column(
                               children: [
-                                Text(
-                                  'Multi Trip',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 12,
-                                      color: payScreen),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 70),
+                                  child: Text(
+                                    'Multi Trip',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 12,
+                                        color: payScreen),
+                                  ),
+
                                 ),
+
                               ],
                             ),
                           ],
